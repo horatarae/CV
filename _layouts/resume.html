@@ -57,14 +57,22 @@
         </header>
         
         {% for publication in site.data.publication %}
-                <div class="resume-item" itemscope itemprop="worksFor" itemtype="http://schema.org/PublicationIssue">
-          <h3 class="resume-item-title" itemprop="name">{{ publications.subject }}</h3>
-          <h4 class="resume-item-details" itemprop="description">{{ job.position }} &bull; {{ job.duration }}</h4>
-          <p class="resume-item-copy">{{ job.summary }}</p>
+                <div class="publication-item">
+                  <h3 class="publication-author">{{ publication.author }} </h3>
+                  <h3 class="publication-year">{{ pulibcation.year }} </h3>
+                  <h3 class="publication-title">{{ publications.title }}</h3>
+                  <h3 class="publication-journal"><em>{{ publication.journal }} </em></h3>
+                  <h3 class="publication-volume"> <em>{{ publication.volume }} </em></h3>
+                  <h3 class="publication-issue> {{ publication.issue }} </h3>
+          <p class="resume-item-copy"></p>
         </div><!-- end of resume-item -->
         {% endfor %}
       
+      
+      </section> 
       <!-- end Publication -->
+      {% endif %}
+      {% if site.resume_section_experience %}
         
       <!-- begin Experience -->
       <section class="content-section">
